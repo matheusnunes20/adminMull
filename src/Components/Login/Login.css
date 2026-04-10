@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(to bottom, #79c2b3, #b1e1b1);
+  background: linear-gradient(135deg, #f9d423, #ff4e50);
   height: 100vh;
 }
 
@@ -18,7 +18,7 @@
 
 /* Cabeçalho preto com logo */
 .header-banner {
-  background-color: #111;
+  background-color: #ffffff;
   padding: 20px 0;
   text-align: center;
   border-top-left-radius: 12px;
@@ -35,7 +35,7 @@
   font-weight: bold;
   font-size: 28px;
   font-family: 'Josefin Sans', sans-serif;
-  color: white;
+  color: rgb(37, 37, 37);
 }
 
 .app-slogan {

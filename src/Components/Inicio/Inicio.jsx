@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { FaLaptopCode, FaCode, FaBars } from "react-icons/fa";
 import { useNavigate } from "react-router-dom"; // IMPORTANTE
+import { FaMoneyBillWave, FaCalendarAlt } from "react-icons/fa";
 import "./inicio.css";
 import perfil from "../../assets/avatar.jpg";
+
 
 const HomePage = () => {
   const [sidebarOpen, setSidebarOpen] = useState(true);
@@ -12,24 +14,36 @@ const HomePage = () => {
     setSidebarOpen(!sidebarOpen);
   };
 
-  const irParaLinguagem = () => {
-    navigate("/linguagem");
+  const irparaFinanceiro = () => {
+    navigate("/financeiro");
+  };
+
+    const irparaGerenciamentoAulas = () => {
+    navigate("/agendamentosDeAulas");
   };
 
   return (
     <div className="inicio-container">
-      {sidebarOpen && (
-        <div className="sidebar">
-          <button className="sidebar-button" onClick={irParaLinguagem}>
-            <FaLaptopCode className="icon" />
-            <span>Configuração da IDE</span>
-          </button>
-          <button className="sidebar-button">
-            <FaCode className="icon" />
-            <span>Configuração da linguagem</span>
-          </button>
-        </div>
-      )}
+    {sidebarOpen && (
+      <div className="sidebar">
+
+        {/* BOTÃO FECHAR */}
+        <button className="close-btn" onClick={toggleSidebar}>
+          ✖
+        </button>
+
+        <button className="sidebar-button" onClick={irparaFinanceiro}>
+          <FaMoneyBillWave className="icon" />
+          <span>Financeiro</span>
+        </button>
+
+        <button className="sidebar-button" onClick={irparaGerenciamentoAulas}>
+          <FaCalendarAlt className="icon" />
+          <span>Gerenciamento de aulas</span>
+        </button>
+
+      </div>
+    )}
 
       <div className="main-content">
         <button className="menu-toggle" onClick={toggleSidebar}>
@@ -43,7 +57,7 @@ const HomePage = () => {
 
         <div className="welcome-message">
           <h1>BEM-VINDO</h1>
-          <p>AO CONFIGAPP</p>
+          <p>Sr(a). Mateus Nunes</p>
         </div>
       </div>
     </div>

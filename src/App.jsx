@@ -5,20 +5,18 @@ import './App.css';
 
 import Login from "./Components/Login/Login";
 import Inicio from "./Components/Inicio/Inicio";
-import Linguagem from "./Components/configSoftware/Linguagem";
-import Versao from "./Components/configSoftware/Versao";
-import SistemaOperacional from "./Components/configSoftware/sistemaOperacional";
-import SistemaOperacionalCMD from "./Components/configSoftware/sistemConfigCMD";
+import Financeiro from "./Components/financeiro/financeiro";
+import Agendamento from "./Components/agendamentoAulas/agendamento";
+import Estoque from "./Components/Estoque/estoque";
 const App = () => {
   return (
     <Router>
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/inicio" element={<Inicio />} />
-        <Route path="/linguagem" element={<Linguagem />} />
-        <Route path="/versao" element={<Versao />} />
-        <Route path="/so" element={<SistemaOperacional />} />
-        <Route path="/sistemConfig" element={<SistemaOperacionalCMD />} />
+        <Route path="/financeiro" element={<Financeiro />} />
+        <Route path="/agendamentosDeAulas" element={<Agendamento />} />
+        <Route path="/estoque" element={<Estoque />} />
       </Routes>
     </Router>
   );

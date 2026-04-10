@@ -1,7 +1,7 @@
 import { FaUser, FaLock } from "react-icons/fa";
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/logo_site.png";
 import "./Login.css";
 
 const Login = () => {
@@ -20,8 +20,7 @@ const Login = () => {
       <div className="login-card">
         <div className="header-banner">
           <img src={logo} alt="logo configApp" className="logo" />
-          <div className="app-name">CONFIGAPP</div>
-          <div className="app-slogan">Porque seu tempo vale mais.</div>
+          
         </div>
 
         <form onSubmit={handleSubmit}>
